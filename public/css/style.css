@@ -1,0 +1,378 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;/*url('/probuilder/static/foto.jpg');*/
+    cursor: url('/static/puntero.png'), auto; /* Cambia el cursor por la imagen del martillo. Tiene que tener 32x32 */
+}
+
+/* Estilos del navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 164, 45);
+    padding: 20px;
+    position: relative;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay espacio */
+}
+
+.navbar-logo {
+    position: absolute;
+    left: 20px;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.navbar-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+
+
+.navbar-menu li:not(:last-child)::after {
+    content: ' | ';
+    color: rgb(0, 0, 0); /* Color amarillo más claro */
+    margin: 0 15px;
+}
+
+.navbar-menu a {
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+    font-size: 18px;
+    margin: 50px;
+}
+  
+li a:hover {
+    margin: 200px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #2C2C2C;
+}
+
+
+
+/* Estilos del encabezado */
+header {
+    text-align: center;
+    margin: 40px 0;
+}
+
+h1 {
+    font-size: 4em;
+    color: black;
+    padding-top: 30px;
+}
+
+.carousel {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+
+
+}
+
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con opacidad */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100; /* Asegura que las flechas estén encima de otros elementos */
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background-color: #FFA500; /* Color naranja */
+    color: white; /* Asegúrate de que el color del texto contraste con el fondo */
+}
+
+
+/* Estilos de la sección Quiénes Somos */
+.quienes-somos, .contacto, .descarga {
+    padding: 40px;
+    background-color: rgb(255, 164, 45); /* Fondo negro más oscuro con transparencia */
+    color: rgb(0, 0, 0); /* Color del texto en blanco */
+    text-align: center;
+    max-width: 800px; /* Ajusta el ancho máximo para que sea un box más contenido */
+    margin: 40px auto; /* Añade espacio en la parte superior e inferior para separar de otras secciones */
+    border-radius: 10px; /* Añade bordes redondeados */
+}
+
+.quienes-somos h2, .contacto h2, .descarga h2{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.column {
+    flex: 1;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.contacto-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+.contacto h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.contacto-form {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias filas */
+    gap: 20px; /* Espacio entre los campos */
+    justify-content: center; /* Centra el formulario */
+}
+
+.contacto-info, .contacto-message {
+    flex: 1;
+    min-width: 300px; /* Asegura que los campos no se vuelvan demasiado pequeños */
+    margin: 0 20px; /* Espacio entre las columnas */
+    font-weight: bold;
+}
+
+.contacto-info {
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.contacto-message {
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.contacto-info label, .contacto-message label {
+    display: block;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0); /* Color del texto de las etiquetas */
+}
+
+.contacto-info input, .contacto-message textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    color: black; /* Color del texto dentro de los campos */
+}
+
+.contacto-message textarea {
+    height: 150px; /* Ajusta la altura si es necesario */
+}
+
+
+
+
+
+
+
+
+#char-count {
+    font-size: 14px;
+    color: #000000; /* Color del texto de cuenta de caracteres en gris claro */
+}
+
+button {
+    background-color: black;
+    color: rgb(255, 255, 255); /* Color de texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center;
+    margin-top: 20px; /* Coloca el botón debajo de los campos */
+}
+
+button:disabled {
+    background-color: #555; /* Color de fondo para el botón deshabilitado */
+    cursor: not-allowed; /* Cambia el cursor cuando el botón está deshabilitado */
+}
+
+/* Estilos del footer */
+footer {
+    background-color: black; /* Color de fondo del footer */
+    color: rgb(255, 164, 45); /* Color del texto */
+    padding: 20px;
+    text-align: center; /* Centrar el contenido */
+}
+
+
+
+footer p {
+    margin: 10px 0 0; /* Espaciado del texto */
+}
+
+/* Estilos de las secciones */
+section {
+    padding: 40px;
+    margin-top: 60px; /* Asegura que el contenido no quede oculto debajo del navbar fijo si es necesario */
+}
+
+html {
+    scroll-behavior: smooth; /* Activa el desplazamiento suave */
+}
+
+
+/* Tablets en orientación vertical y teléfonos */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar-menu li {
+        margin: 10px 0;
+    }
+
+    .carousel {
+        height: 200px;
+    }
+
+    .carousel-control {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+    }
+
+    .quienes-somos, .contacto {
+        padding: 20px;
+    }
+
+    .columns {
+        flex-direction: column;
+    }
+
+    .contacto-info, .contacto-message {
+        max-width: 100%;
+    }
+
+    .contacto-message textarea {
+        height: 100px;
+    }
+
+    .contacto-form {
+        gap: 10px;
+    }
+
+    .contacto h3 {
+        font-size: 1.2em;
+    }
+}
+
+/* Teléfonos en orientación horizontal */
+@media (max-width: 480px) {
+    .navbar-logo {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .carousel {
+        height: 150px;
+    }
+
+    .carousel-control {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .contacto-form {
+        gap: 5px;
+    }
+
+    .contacto-message textarea {
+        height: 80px;
+    }
+}
+
+/* Estilos básicos para los íconos sociales */
+
+/* Estilos básicos para los íconos sociales */
+.social-icon {
+    display: inline-block;
+    margin: 10px; /* Espacio entre los íconos, ajusta según sea necesario */
+}
+
+.social-icon-img {
+    width: 40px; /* Ajusta el tamaño según sea necesario */
+    height: 40px; /* Ajusta el tamaño según sea necesario */
+    transition: all 0.3s ease; /* Transición suave para el efecto */
+}
+
+/* Efecto de resplandor en hover */
+.social-icon:hover .social-icon-img {
+    filter: brightness(1.2); /* Aumenta el brillo de la imagen */
+    box-shadow: 0 0 10px wheat; /* Resplandor naranja */
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: none;
+}
+
+button[disabled] {
+    cursor: not-allowed;
+}

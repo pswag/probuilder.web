@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="/" class="navbar-logo">
+            <img src="./public/static/logo.png" alt="Logo" class="logo-img">
+        </a>
+        <ul class="navbar-menu">
+            <li><a href="#quienes-somos" class="nav-link">Nosotros</a></li>
+            <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            <li><a href="./descarga.html" class="nav-link">Descarga</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <header>
+            <h1>ProBuilder</h1>
+        </header>
+        
+        <section class="carousel">
+            <button class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="carousel-inner">
+                <img src="./public/static/img.jpg" alt="Imagen 1">
+                <img src="./public/static/img2.jpg" alt="Imagen 2">
+            </div>
+            <button class="carousel-control next" onclick="moveSlide(1)">&#10095;</button>
+        </section>
+    
+        <section id="quienes-somos" class="quienes-somos">
+            <h2>NOSOTROS</h2>
+            <div class="columns">
+                <div class="column left">
+                    <p><strong>Quiénes somos:</strong> Probuilder es una aplicación móvil innovadora pensada y diseñada para mejorar la transparencia y seguridad a la hora de contratar servicios en el área de la construcción...</p>
+                </div>
+                <div class="column right">
+                    <p><strong>Nuestra Misión:</strong> Nos dedicamos a brindar una plataforma que permita a clientes y contratistas interactuar de manera segura y eficiente...</p>
+                </div>
+            </div>
+        </section>
+    
+        <section id="contacto" class="contacto">
+            <div class="contacto-box">
+                <h2>CONTÁCTANOS</h2>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                        <img src="./public/static/facebook.png" alt="Facebook" class="social-icon-img">
+                    </a>
+                    <a href="https://wa.me/1234567890" target="_blank" class="social-icon">
+                        <img src="./public/static/whatsapp.png" alt="WhatsApp" class="social-icon-img">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                        <img src="./public/static/instagram.png" alt="Instagram" class="social-icon-img">
+                    </a>
+                </div>
+            </div>
+            <h3>DÉJANOS UN MENSAJE</h3>
+
+            <form id="contact-form" class="contacto-form">
+                <div class="contacto-info">
+                    <label for="name">Nombre Completo:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span id="name-error" class="error-message"></span>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="contacto-message">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" maxlength="500" required></textarea>
+                    <p id="char-count">500</p>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <!-- Contenedor de notificación -->
+            <div id="notification" style="display: none; background: green; color: white; padding: 10px; margin-top: 20px;"></div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Probuilder. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./public/js/main.js"></script>
+</body>
+</html>
